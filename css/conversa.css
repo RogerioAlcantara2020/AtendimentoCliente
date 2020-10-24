@@ -1,0 +1,74 @@
+.sala-conversa{
+    width: 300px;
+    height:500px;
+    margin-top: 10px;
+    border-radius: 20px;
+    background-color: #d6d6d6;
+    color: blue;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 1px 1px 15px #7A7A7A;
+   
+}
+
+.rotulo-conversando{
+    float: right;
+    color:#666666;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 40px;
+    height:10px;
+}
+
+.painel-msg{
+    overflow-y:auto; 
+    overflow-x:hidden; 
+    width: 300px;
+    height: 350px;
+    background-color: #EFEFEF;
+    border: solid 1px #c3c3c3;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.btn-envia{
+    float: right;
+}
+
+.titulo-janela{
+    position: relative;
+    float: left;
+    width: 90%;
+    background-color: bisque;
+}
+
+.cx-texto{
+    float: left;
+    border: solid 1px #c3c3c3;
+    border-radius: 0px;
+    margin-bottom: 0px;
+}
+
+.origem-ouve{
+    float: left;
+    width: 200px;
+    background-color:#B7E8FF;
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 0 5px 5px 5px;
+    color:#666666;
+    font-weight: 300;    
+}
+
+.origem-fala{
+    float: right;
+    width: 200px;
+    background-color:#BEE9BE;
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 10px 10px 0px 10px;
+    color:#666666;
+    font-weight: 300;    
+}

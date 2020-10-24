@@ -1,0 +1,72 @@
+.campo-grupo{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* align-items: center; */
+  width: 80%;
+  /* align-items: stretch; */
+  align-content: center;
+}
+
+.rotulo-cadastro{
+  /* margin-left: 0px; */
+  align-self: center;
+  font-weight: bold;
+  justify-content: flex-end;  
+  /* padding: 0px; */
+  color: #666;
+  width: 100%;
+  /* border: 2px solid #fff; */
+  font-size: clamp(0.8em, 0.8em + .8vw, 1.00em);
+}
+
+.input-cadastro{
+  float: left;
+  margin-left: 0px;
+  margin-top: 5px;
+  align-self: center;  
+  padding: 4px;
+  color: #333;
+  font-size: clamp(0.8em, 1.5em + 1.0vw, 1.30em);
+  background-color:#fff;
+  width: 380px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+.select-cadastro{
+  margin-left: 0px;
+  margin-top: 15px;
+  align-self: center;  
+  padding: 4px;
+  color: #333;
+  font-size: clamp(0.8em, 1.5em + 1.0vw, 1.30em);
+  background-color:#fff;
+  width: 100px;
+  border: 2px solid #ccc;
+}
+
+.btn-frm{
+  margin-left: 0px;
+  margin-top: 1px;
+  align-self: center;  
+  width: 100px;  
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #333;
+  font-size: clamp(0.8em, 1.5em + 1.0vw, 1.30em);
+  /* background-color: #333; */
+}
+
+.expediente{
+  color:#333;
+  background-color:#E4D7D3;
+  width: 400px;
+  height: 110%;
+  border: solid 1px #666;
+  border-radius: 1px;
+  padding: 10px;
+  font-size: 12px;
+  margin-top: 30px;
+}

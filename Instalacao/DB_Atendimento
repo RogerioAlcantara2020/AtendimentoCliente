@@ -1,0 +1,86 @@
+-- --------------------------------------------------------
+-- Servidor:                     127.0.0.1
+-- Versão do servidor:           5.7.31 - MySQL Community Server (GPL)
+-- OS do Servidor:               Win64
+-- HeidiSQL Versão:              11.0.0.5992
+-- --------------------------------------------------------
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+-- Copiando estrutura para tabela bd_atendimento.atendente
+CREATE TABLE IF NOT EXISTS `atendente` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `criado_em` timestamp NULL DEFAULT NULL,
+  `atualizado_em` datetime DEFAULT NULL,
+  `ultimo_acesso` datetime DEFAULT NULL,
+  `nome_completo` char(100) DEFAULT NULL,
+  `email` char(100) DEFAULT NULL,
+  `senha` longtext,
+  `expediente` longtext,
+  PRIMARY KEY (`id`) USING BTREE,
+  UNIQUE KEY `email` (`email`) USING BTREE
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- Copiando dados para a tabela bd_atendimento.atendente: 0 rows
+/*!40000 ALTER TABLE `atendente` DISABLE KEYS */;
+/*!40000 ALTER TABLE `atendente` ENABLE KEYS */;
+
+-- Copiando estrutura para tabela bd_atendimento.atendimento
+CREATE TABLE IF NOT EXISTS `atendimento` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `criado_em` datetime NOT NULL,
+  `atualizado_em` datetime DEFAULT NULL,
+  `encerrado_em` datetime DEFAULT NULL,
+  `id_atendente` int(11) DEFAULT NULL,
+  `sessao_cliente` char(20) DEFAULT NULL,
+  `nome_cliente` char(50) DEFAULT NULL,
+  `email_cliente` char(100) DEFAULT NULL,
+  `status_atendimento` int(11) DEFAULT NULL,
+  `avaliacao_atendimento` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  UNIQUE KEY `id` (`id`) USING BTREE
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- Copiando dados para a tabela bd_atendimento.atendimento: 0 rows
+/*!40000 ALTER TABLE `atendimento` DISABLE KEYS */;
+/*!40000 ALTER TABLE `atendimento` ENABLE KEYS */;
+
+-- Copiando estrutura para tabela bd_atendimento.conversa
+CREATE TABLE IF NOT EXISTS `conversa` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_conversa` char(50) NOT NULL DEFAULT '',
+  `origem_dialogo` int(11) NOT NULL,
+  `mensagem` longtext NOT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- Copiando dados para a tabela bd_atendimento.conversa: 0 rows
+/*!40000 ALTER TABLE `conversa` DISABLE KEYS */;
+/*!40000 ALTER TABLE `conversa` ENABLE KEYS */;
+
+-- Copiando estrutura para tabela bd_atendimento.gerente
+CREATE TABLE IF NOT EXISTS `gerente` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `criado_em` datetime DEFAULT NULL,
+  `atualizado_em` datetime DEFAULT NULL,
+  `ultimo_acesso` datetime DEFAULT NULL,
+  `nome_completo` char(100) DEFAULT NULL,
+  `email` char(100) DEFAULT NULL,
+  `senha` longtext,
+  PRIMARY KEY (`id`) USING BTREE,
+  UNIQUE KEY `email` (`email`) USING BTREE
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- Copiando dados para a tabela bd_atendimento.gerente: 1 rows
+/*!40000 ALTER TABLE `gerente` DISABLE KEYS */;
+INSERT INTO `gerente` (`id`, `criado_em`, `atualizado_em`, `ultimo_acesso`, `nome_completo`, `email`, `senha`) VALUES
+	(1, '2020-10-24 08:45:42', NULL, NULL, 'admin', 'admin@admin.com.br', 'MTIzNDU2');
+/*!40000 ALTER TABLE `gerente` ENABLE KEYS */;
+
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
