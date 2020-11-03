@@ -33,15 +33,23 @@ carregaPagina(acao);
                     <li><a href="#" onclick="carregaPagina('?Controller=Atendimento&Action=gerenciar')">Prestar Suporte</a></li>
                 </ul>
             </li>
+            <?php
+            if(isset($_SESSION["atendente_email"]) ||isset($_SESSION["gerente_email"]) ){
+            ?>
             <li><a href="#" onclick="carregaPagina('?Controller=Home&Action=sair')">Sair</a></li>
+            <?php
+           }
+            ?>
         </ul>
     </nav>
 
     <div id="conteudo">
 
     </div>
-    <!-- <a href="?Controller=Atendimento&Action=novo">Quero Atendimento</a><br>
-    <a href="?Controller=Atendente&Action=logar">Logar no Sistema</a> -->
+
+<!-- <footer>
+Desenvolvido por Rogério Alcântara -@2020
+</footer> -->
 
     <script>
         function carregaPagina(pagina) {
@@ -55,30 +63,5 @@ carregaPagina(acao);
             })
         }
 
-        // function enviaFormulario(formulario) {
-
-        //     $(`form[name="${formulario}"]`).submit(function(e) {
-        //         e.preventDefault();
-
-        //         let endPoint = $('#txtEndPoint').val();
-        //         let divConteudo = document.getElementById("conteudo");
-
-        //         var form = $(this).serialize(0);
-        //         var dois =form[0];
-
-        //         console.log(dois);
-
-        //         $.ajax({
-        //             url:endPoint,
-        //             method:'POST',
-        //             data:$(this).serialize(),
-        //             success:function(resposta){
-        //                 divConteudo.innerHTML = resposta; 
-        //                 console.log(resposta);
-        //             }
-                    
-        //         })
-        //     })
-        // }
     </script>
 </body>

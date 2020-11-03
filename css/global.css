@@ -7,6 +7,10 @@ body{
   font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.conteudo{
+  height: 100%;
+}
+
 .msg{
   width: 100%;
   background-color: #AAFFBF;
@@ -53,4 +57,18 @@ body{
   border-left: solid 5px #ee881d;
   padding: 20px;
   font-size: clamp(0.8em, 1.0em + 1.0vw, 1.00em);    
+}
+
+footer{
+  background-color: #469;
+  text-align: center;
+  padding: 50px;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  color: #d6d6d6;
+  width: 100%;
+ 
+  bottom: 0px;
+  /* position: fixed; */
+    left:0;
 }
